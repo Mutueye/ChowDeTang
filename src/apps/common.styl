@@ -17,7 +17,7 @@ PURPLE = #b20cd0
 MOBILE = '(max-width: 479px)'
 TABLET = '(min-width: 480px) and (max-width: 930px)'
 SMALL = '(max-width: 930px)'
-WIDER = '(min-width: 1240px)'
+WIDER = '(min-width: 1280px)'
 RETINA = '(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi)'
 
 // transition
@@ -56,13 +56,7 @@ COMMON_SPACE_MOBILE = 12px
 COMMON_WIDTH = 960px
 COMMON_WIDTH_WIDER = 1200px
 
-.section-block
-	width 100%
-	height auto
-	display block
-	margin-bottom COMMON_SPACE
-	@media MOBILE
-		margin-bottom COMMON_SPACE_MOBILE
+
 
 .row-container
 	width COMMON_WIDTH
@@ -135,5 +129,15 @@ COMMON_WIDTH_WIDER = 1200px
 		@media MOBILE
 			margin-right COMMON_SPACE_MOBILE
 			margin-bottom COMMON_SPACE_MOBILE
+
+.section-block
+	width 100%
+	height auto
+	display block
+	margin-bottom COMMON_SPACE*2
+	@media MOBILE
+		margin-bottom COMMON_SPACE_MOBILE*2
+	.row-content
+		overflow hidden
 
 
