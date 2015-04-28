@@ -1,0 +1,104 @@
+// global.styl - general stylus reused across projects (e.g., sprite)
+
+/*******************/
+/* Square & circle */
+/*******************/
+/**
+ * Shortcut to use the same width and height
+ */
+square()
+    width  arguments
+    height arguments
+
+/**
+ * Same as square, with a 50% border-radius
+ */
+circle()
+    square arguments
+    border-radius 50%
+
+/*****************/
+/* Border-radius */
+/*****************/
+/**
+ * Shortcuts to use top/right/bottom/left
+ */
+border-top-radius()
+    border-top-left-radius arguments
+    border-top-right-radius arguments
+border-right-radius()
+    border-top-right-radius arguments
+    border-bottom-right-radius arguments
+border-bottom-radius()
+    border-bottom-right-radius arguments
+    border-bottom-left-radius arguments
+border-left-radius()
+    border-bottom-left-radius arguments
+    border-top-left-radius arguments
+
+/*******************/
+/* String to pixel */
+/*******************/
+/**
+ * Convert a string to pixel (from vraiable.json)
+ */
+px(var)
+    var = 1px * var
+
+/****************/
+/* String to ms */
+/****************/
+/**
+ * Convert a string to milliseconds (from vraiable.json)
+ */
+ms(var)
+    var = 1ms * var
+
+/********************/
+/* Easing functions */
+/********************/
+
+easeInOutCubic = cubic-bezier(.645, .045, .355, 1)
+
+/**********/
+/* Blacks */
+/**********/
+/**
+ * Helper to get a black color
+ * Get a number from 1 to 100 (without %)
+ */
+blacks(pct)
+    hsl(0, 0%, pct)
+
+/***********/
+/* Fake MQ */
+/***********/
+/**
+ * Fake media query to have the breakpoint clicable
+ * in the new Chrome emulator
+ */
+@media (min-width: 320px)
+    sup
+        hello bro
+
+/**********/
+/* Resets */
+/**********/
+//*, *:before, *:after
+    //box-sizing border-box
+
+body
+    padding 0
+    margin 0
+
+ul
+    padding 0
+    margin 0
+
+figure
+    margin 0
+    padding 0
+
+h1
+    margin 0
+

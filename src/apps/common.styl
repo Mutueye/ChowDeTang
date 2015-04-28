@@ -1,0 +1,139 @@
+@require './normalised'
+
+// colors
+GRAY_F5 = #f5f5f5
+GRAY_E3 = #e3e3e3
+GRAY_33 = #333333
+GRAY_66 = #666666
+OCEAN_BLUE = #0c80e8
+ORANGE_RED = #e4420a
+YELLOW = #e89d0c
+GREEN = #09be00
+BROWN = #be7d00
+PURPLE = #b20cd0
+
+
+// media query
+MOBILE = '(max-width: 479px)'
+TABLET = '(min-width: 480px) and (max-width: 930px)'
+SMALL = '(max-width: 930px)'
+WIDER = '(min-width: 1240px)'
+RETINA = '(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi)'
+
+// transition
+transition()
+	-webkit-transition arguments
+	-moz-transition arguments
+	-o-transition arguments
+	transition arguments
+
+//hidden
+.hidden
+	display none !important
+
+.mobile-hidden
+	display block
+	@media MOBILE
+		display none !important
+
+.text-left
+	text-align left
+	td
+		text-align left
+.text-center
+	text-align center
+	td
+		text-align center
+.text-right
+	text-align right
+	td
+		text-align right
+
+// common layout
+//-----------------------------------------------------------------------------------------
+COMMON_SPACE = 30px
+COMMON_SPACE_MOBILE = 12px
+COMMON_WIDTH = 960px
+COMMON_WIDTH_WIDER = 1200px
+
+.section-block
+	width 100%
+	height auto
+	display block
+	margin-bottom COMMON_SPACE
+	@media MOBILE
+		margin-bottom COMMON_SPACE_MOBILE
+
+.row-container
+	width COMMON_WIDTH
+	display block
+	height auto
+	margin 0 auto
+	@media WIDER
+		width COMMON_WIDTH_WIDER
+	@media MOBILE
+		width auto
+		margin-left COMMON_SPACE_MOBILE
+
+.row-content
+	width COMMON_WIDTH + COMMON_SPACE
+	position relative
+	display block
+	@media WIDER
+		width COMMON_WIDTH_WIDER + COMMON_SPACE
+	@media MOBILE
+		width 100%
+
+.row
+	width 100%
+	height auto
+	display block
+	.col-1of1
+		width 100%
+		float left
+	.col-1of2
+		width 50%
+		float left
+	.col-1of3
+		width 33.333%
+		float left
+	.col-2of3
+		width 66.666%
+		float left
+	.col-1of4
+		width 25%
+		float left
+	.col-1of4.suit-mobile
+		@media MOBILE
+			width 100%
+	.col-1of4.suit-mobile-1of2
+		@media MOBILE
+			width 50%
+	.col-3of4
+		width 75%
+		float left
+	.col-3of4.suit-mobile
+		@media MOBILE
+			width 100%
+	.col-1of5
+		width 20%
+		float left
+	.col-2of5
+		width 40%
+		float left
+	.col-3of5
+		width 60%
+		float left
+	.col-4of5
+		width 80%
+		float left
+	.col-content
+		width auto
+		display block
+		margin-right COMMON_SPACE
+		margin-bottom COMMON_SPACE
+		@media MOBILE
+			margin-right COMMON_SPACE_MOBILE
+			margin-bottom COMMON_SPACE_MOBILE
+
+
