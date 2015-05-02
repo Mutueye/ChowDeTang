@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='description', content='Welcome')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+		title 周德堂－活动风采
+		link(rel='stylesheet', href='index.css')
+	body
+		include ../../components/topbar/index_about
+		.section-block
+			include ../../components/slider/index
+		.row-container
+			.row-content
+				.row
+					.col-1of5
+						.col-content
+							include ../../components/left-menu/leftmenu-aboutus-events
+					.col-4of5
+						.col-content
+							include ../../components/article/article_events
+		include ../../components/footer/index
