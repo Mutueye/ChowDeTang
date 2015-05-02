@@ -1,0 +1,45 @@
+.service-item
+	display block
+	overflow visible
+	width 100%
+	background-image url('images/article-corner.png')
+	background-repeat no-repeat
+	background-position right bottom
+	border-top 1px solid OCEAN_BLUE
+	position relative
+	margin-bottom COMMON_SPACE
+	background-color #ffffff
+	min-height 160px
+	margin-top 30px
+	margin-bottom 60px
+	@media MOBILE
+		margin-bottom COMMON_SPACE_MOBILE
+	.service-item-content
+		width auto
+		display block
+		padding COMMON_SPACE COMMON_SPACE COMMON_SPACE COMMON_SPACE*2+160px
+		.service-item-title
+			width 100%
+			height 20px
+			line-height 20px
+			font-size 18px
+			margin-bottom 5px
+			text-align left
+			color GRAY_33
+		.service-item-text
+			width 100%
+			height auto
+			font-size 14px
+			line-height 28px
+			color GRAY_66
+			text-align left
+	.service-item-img
+		width 160px
+		height 160px
+		position absolute
+		left COMMON_SPACE
+		top -(COMMON_SPACE)
+		img 
+			width 100%
+			height 100%
+			float left

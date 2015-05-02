@@ -431,3 +431,17 @@ td,
 th {
   padding: 0;
 }
+
+
+.clearfix:after { 
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden; 
+}
+
+*html>body .clearfix { 
+  display: inline-block; width: 100%; 
+}
+
