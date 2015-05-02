@@ -77,7 +77,13 @@ COMMON_WIDTH_WIDER = 1200px
 		width COMMON_WIDTH_WIDER + COMMON_SPACE
 	@media MOBILE
 		width 100%
-
+.inner-container
+	width 100%
+	height auto
+	overflow hidden
+.inner-content
+	width calc(100% + COMMON_SPACE)
+	display block
 .row
 	width 100%
 	height auto
