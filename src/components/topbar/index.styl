@@ -5,6 +5,8 @@
 	position fixed
 	z-index 9999
 	box-shadow 0 0 20px 0px rgba(black,0.1)
+	@media MOBILE
+		height 54px
 	.topbar-line
 		width 100%
 		height 4px
@@ -16,6 +18,11 @@
 		position absolute
 		top 14px
 		left 0px
+		@media MOBILE
+			width 50px
+			height 26px
+			background-size 100%
+			top 12px
 	.menu
 		width auto
 		height 84px
@@ -50,8 +57,7 @@
 					border-top 4px solid OCEAN_BLUE
 					color OCEAN_BLUE
 					background-color transparent
-					cursor default
-										
+					cursor default						
 		.menu-devider
 			float left
 			width 0px
@@ -59,9 +65,46 @@
 			margin-top 36px
 			display block
 			border-left 1px dotted GRAY_E3
+	.btn-mobile-menu
+		width 32px
+		height 26px
+		margin 9px 12px
+		position absolute
+		display none
+		right 0px
+		top 7px
+		background-image url('images/icon-mobile-menu.png')
+		background-repeat no-repeat
+		background-position center center
+		background-size 100%
+		@media MOBILE
+			display block
 .topbar-space
 	width 100%
-	height 84px
+	height 85px
 	display block
 	overflow hidden
-
+	@media MOBILE
+		height 54px
+.mobile-menu-bg
+	width auto
+	height auto
+	display none
+	top -100px
+	right -100px
+	bottom -100px
+	left -100px
+	position fixed
+	z-index 9999
+	background-color rgba(black, .5)
+	@media MOBILE
+		display block
+.mobile-menu-content
+	width 68%
+	height auto
+	top 0px
+	right 0px
+	bottom -100px
+	display block
+	position absolute
+	z-index 10000

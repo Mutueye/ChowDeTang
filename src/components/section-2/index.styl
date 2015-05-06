@@ -6,7 +6,6 @@
 	.service-block
 		width 100%
 		height auto
-		//box-shadow 0 0 30px 0px rgba(black,0.03)
 		border 1px solid #ffffff
 		display block
 		text-decoration none
@@ -37,13 +36,16 @@
 				color #ffffff
 				bottom -22px
 				overflow visible
+				@media MOBILE
+					border 2px solid #ffffff
+					bottom -20px
 				&-deco
 					width 100px
 					height 10px
 					background-color transparent
 					position absolute
 					border-top 1px solid YELLOW
-					bottom -14px
+					bottom -13px
 					left 0px
 					background-image url('images/section-2-title-deco.png')
 					background-position top center
@@ -58,3 +60,7 @@
 			line-height 24px
 			color GRAY_33
 			text-align center
+			@media MOBILE
+				padding 30px 15px 15px 15px
+				font-size 12px
+				line-height 20px
