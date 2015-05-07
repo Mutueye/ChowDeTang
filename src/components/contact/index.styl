@@ -4,6 +4,8 @@
 	color GRAY_33
 	text-align left
 	line-height 40px
+	@media MOBILE
+		font-size 15px
 .contact-address
 	width 100%
 	height auto
@@ -11,18 +13,24 @@
 	font-size 12px
 	text-align left
 	color GRAY_66
+	@media MOBILE
+		line-height 20px
 .article-content.contact-fix
 	margin-right 0px
 .contact-info
 	width 100%
 	height auto
 	border-top 1px solid GRAY_E3
+	@media MOBILE
+		border-top 1px dotted GRAY_E3
 	li
 		border-bottom 1px solid GRAY_E3
 		line-height 30px
 		font-size 12px
 		text-align left
 		height auto
+		@media MOBILE
+			border-bottom 1px dotted GRAY_E3
 .contact-form-label
 	width 100%
 	height 20px
@@ -70,6 +78,11 @@
 	transition(all 0.2s ease-in-out)
 	&:hover
 		background-color lighten(OCEAN_BLUE, 20%)
+	@media MOBILE
+		width 100%
+		height auto
+		line-height 34px
+		font-size 14px
 
 
 

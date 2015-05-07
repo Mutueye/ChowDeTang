@@ -9,16 +9,22 @@
 	margin-bottom COMMON_SPACE*2
 	@media MOBILE
 		margin-bottom COMMON_SPACE_MOBILE*2
+		background-size 25px
 	.article-title
 		width auto
 		display block
 		height 80px
-		margin 0px 30px
+		margin 0px COMMON_SPACE
 		border-bottom 1px solid GRAY_E3
 		line-height 80px
 		font-size 30px
 		text-align left
 		color GRAY_33
+		@media MOBILE
+			margin 0px COMMON_SPACE_MOBILE
+			height 48px
+			line-height 48px
+			font-size 18px
 	.article-content
 		width auto
 		display block
@@ -27,8 +33,14 @@
 		color GRAY_33
 		overflow hidden
 		line-height 28px
+		@media MOBILE
+			margin 12px 12px 20px 12px
+			line-height 20px
+			font-size 13px
 		img
 			max-width 100%
 			height auto
 		p
 			text-indent 2em
+			@media MOBILE
+				margin 0px

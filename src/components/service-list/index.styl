@@ -14,10 +14,14 @@
 	margin-bottom 60px
 	@media MOBILE
 		margin-bottom COMMON_SPACE_MOBILE
+		background-size 25px
+		min-height 60px
 	.service-item-content
 		width auto
 		display block
 		padding COMMON_SPACE COMMON_SPACE COMMON_SPACE COMMON_SPACE*2+160px
+		@media MOBILE
+			padding COMMON_SPACE_MOBILE COMMON_SPACE_MOBILE COMMON_SPACE_MOBILE COMMON_SPACE_MOBILE*2+60px
 		.service-item-title
 			width 100%
 			height 20px
@@ -26,6 +30,9 @@
 			margin-bottom 5px
 			text-align left
 			color GRAY_33
+			@media MOBILE
+				font-size 14px
+				font-weight bold
 		.service-item-text
 			width 100%
 			height auto
@@ -33,12 +40,20 @@
 			line-height 28px
 			color GRAY_66
 			text-align left
+			@media MOBILE
+				font-size 12px
+				line-height 18px
 	.service-item-img
 		width 160px
 		height 160px
 		position absolute
 		left COMMON_SPACE
 		top -(COMMON_SPACE)
+		@media MOBILE
+			width 60px
+			height 60px
+			left COMMON_SPACE_MOBILE
+			top -12px
 		img 
 			width 100%
 			height 100%

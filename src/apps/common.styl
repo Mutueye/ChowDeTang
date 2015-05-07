@@ -103,6 +103,9 @@ COMMON_WIDTH_WIDER = 1200px
 	.col-2of3
 		width 66.666%
 		float left
+	.col-1of3.suit-mobile, .col-2of3.suit-mobile
+		@media MOBILE
+			width 100%
 	.col-1of4
 		width 25%
 		float left
@@ -130,6 +133,9 @@ COMMON_WIDTH_WIDER = 1200px
 	.col-4of5
 		width 80%
 		float left
+	.col-1of5.suit-mobile, .col-2of5.suit-mobile, .col-3of5.suit-mobile, .col-4of5.suit-mobile
+		@media MOBILE
+			width 100%
 	.col-content
 		width auto
 		display block

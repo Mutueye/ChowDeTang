@@ -6,6 +6,9 @@
 	position relative
 	background-color #ffffff
 	padding 10px 0 0.1px 0
+	@media MOBILE
+		padding 24px 0px 12px 0px
+		text-align center
 	.lm-title
 		position absolute
 		width 100%
@@ -13,12 +16,21 @@
 		top -92px
 		background-color #ffffff
 		overflow visible
+		@media MOBILE
+			width 30%
+			height 40px
+			top -32px
+			left 50%
+			margin-left -15%
 		.lm-title-content
 			width auto
 			margin 4px
 			height 84px
 			display block
 			background-color OCEAN_BLUE
+			@media MOBILE
+				margin 2px
+				height 36px
 			.lm-title-cn
 				width 100%
 				text-align center
@@ -27,6 +39,10 @@
 				line-height 40px
 				padding-top 10px
 				color #ffffff
+				@media MOBILE
+					font-size 15px
+					line-height 17px
+					padding-top 5px
 			.lm-title-en
 				width 100%
 				text-align center
@@ -34,6 +50,9 @@
 				height auto
 				line-height 20px
 				color #ffffff
+				@media MOBILE
+					font-size 7px
+					line-height 12px
 		.lm-title-deco
 			position absolute
 			width 100%
@@ -47,7 +66,12 @@
 				background-color transparent
 				background-image url('images/left-menu-title-arrow.png')
 				background-repeat no-repeat
-				background-position center
+				background-position top center
+				@media MOBILE
+					margin 0px 2px
+					border-top 1px solid YELLOW
+					background-size 8px
+
 	.lm-btn
 		width auto
 		display block
@@ -62,7 +86,22 @@
 		background-repeat no-repeat
 		background-position -30% center
 		transition(all 0.2s ease-in-out)
+		@media MOBILE
+			display inline-block
+			margin 0px 4px
+			line-height 30px
+			font-size 12px
+			padding 0px 5px
+			height 30px
+			text-align center
+			background-image none
+			background-color lighten(OCEAN_BLUE,90%)
+			&.fix-too-small
+				padding 0px 30px
 		&:hover, &.sel
 			background-color lighten(OCEAN_BLUE,80%)
 			color OCEAN_BLUE
 			background-position 85% center
+			@media MOBILE
+				background-color OCEAN_BLUE
+				color #ffffff
