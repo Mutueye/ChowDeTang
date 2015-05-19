@@ -1,21 +1,28 @@
 var fs = require('fs');
 var path = require('path');
 
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var duration = require('gulp-duration');
+var plumber = require('gulp-plumber');
+var source = require('vinyl-source-stream')
+var streamify = require('gulp-streamify')
+
 var http = require('http');
 var connect = require('connect');
 var serveStatic = require('serve-static');
 var lr = require('tiny-lr');
 var injectLr = require('connect-livereload');
 
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var duration = require('gulp-duration');
-var plumber = require('gulp-plumber');
-
 var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var prefix = require('gulp-autoprefixer');
+
+var browserify = require('browserify');
+var watchify = require('watchify');
+var coffeeify = require('coffeeify');
+var jadeify = require('browserify-jade').jade({pretty: false});
 
 var through = require('through');
 
@@ -61,6 +68,41 @@ function run(callback) {
 		this.queue(null);
 	}
 }
+
+// set the first letter to upercase
+function ucfirst(s) {
+	return s.slice(0, 1).toUpperCase() + s.substr(1);
+}
+
+// Browserify
+//--------------------------------------------------------------------------------------------------
+function bundle(callback, extension) {
+	extension = extension || '.coffee';
+	var file = './src/apps/' + APP_NAME + '/index' + extension;
+	var options = { extensions: ['.coffee', '.jade'] };
+
+	watchify(browserify(file,options))
+		.transform(coffeeify)
+		.transform(jadeify)
+		.on('update', function() {
+			var done = finished(2, function() {
+				triggerLr(LR_PORT, 'all');
+			});
+			bundle(done);
+			style(done); 
+		})
+		.bundle()
+		.on('error', handleError)
+		.pipe(source('app.js'))
+		.pipe(duration('Bundling app "' + APP_NAME + '"'))
+			.on('end', function() {
+			console.log(ucfirst(APP_NAME) + ' is ready on http://localhost:' + APP_PORT);
+		})
+		.pipe(gulp.dest(setDest()))
+		.pipe(run(callback))
+
+}
+
 
 // Template
 //--------------------------------------------------------------------------------------------------
@@ -194,6 +236,7 @@ function triggerLr(type) {
 /* Build app */
 gulp.task('build', function() {
 	template();
+	bundle();
 	style();
 	copyStatic();
 });
