@@ -1,16 +1,12 @@
 .topbar
 	width 100%
-	height 84px
+	height 80px
 	background-color #ffffff
 	position fixed
 	z-index 9999
 	box-shadow 0 0 20px 0px rgba(black,0.1)
 	@media MOBILE
 		height 54px
-	.topbar-line
-		width 100%
-		height 4px
-		background-color GRAY_E3
 	.logo
 		width 100px
 		height 52px
@@ -19,17 +15,17 @@
 		top 14px
 		left 0px
 		@media MOBILE
-			width 50px
-			height 26px
+			width 58px
+			height 30px
 			background-size 100%
 			top 12px
 	.menu
 		width auto
-		height 84px
+		height 80px
 		overflow hidden
 		position absolute
-		top -4px
-		right 0px
+		top 0px
+		right COMMON_SPACE
 		@media MOBILE
 			width 40%
 			height auto
@@ -46,69 +42,65 @@
 		.menubtn
 			float left
 			width auto
-			padding 0 30px
-			line-height 80px
-			font-size 14px
-			color GRAY_66
+			padding 0px
+			margin-left 25px
+			margin-top 20px
+			padding-bottom 6px
+			height 40px
 			text-align center
 			display block
 			text-decoration none
-			border-top 4px solid GRAY_E3
+			background-color transparent
+			border-bottom 2px solid #ffffff
 			transition(all 0.2s ease-in-out)
 			@media MOBILE
-				border none
 				margin 0
 				padding 0
 				width 100%
+				height auto
 				display block
 				height auto
-				line-height 60px
-				border-bottom 1px solid GRAY_E3
+				padding 10px 0px
+				border-bottom 1px solid #ffffff
 				text-align center
 				font-size 16px
 				color GRAY_33
 				text-decoration none
-			&:hover
-				background-color lighten(OCEAN_BLUE,20%)
-				border-top 4px solid OCEAN_BLUE
-				color #ffffff
-				margin 0
-				padding 0 30px
+				background-color transparent
+				border-radius 0px
+			&.sel, &:hover
+				border-bottom 2px solid OCEAN_BLUE
+				.text-cn
+						color GRAY_33
+					.text-en
+						color GRAY_66
 				@media MOBILE
-					border-bottom 1px solid GRAY_E3
-					border-top none
-					padding 0px
-					margin 0px
-			&.sel
-				margin 0 30px
-				padding 0
-				border-top 4px solid OCEAN_BLUE
-				color OCEAN_BLUE
-				@media MOBILE
-					margin 0
-					padding 0
-					border-top none
-					border-bottom 1px solid GRAY_E3
-					color #ffffff
+					border-bottom 1px solid #ffffff
 					background-color OCEAN_BLUE
-				&:hover
-					border-top 4px solid OCEAN_BLUE
-					color OCEAN_BLUE
-					background-color transparent
-					cursor default
-					@media MOBILE
-						border-top none
-						background-color OCEAN_BLUE
+					.text-cn
 						color #ffffff
-						padding 0
-						margin 0		
-		.menu-devider
+					.text-en
+						color #ffffff
+			.text-cn
+				width auto
+				text-align center
+				font-size 18px
+				color GRAY_66
+				line-height 24px
+			.text-en
+				width auto
+				text-align center
+				font-size 10px
+				color GRAY_99
+				line-height 16px
+		.menu-dvline
+			width 1px 
+			height 40px
+			margin-top 20px
 			float left
-			width 0px
-			height 16px
-			margin-top 36px
 			display block
-			border-left 1px dotted GRAY_E3
+			margin-left 25px
+			background-color GRAY_F5
 			@media MOBILE
 				display none
 	.btn-mobile-menu
@@ -127,7 +119,7 @@
 			display block
 .topbar-space
 	width 100%
-	height 84px
+	height 80px
 	display block
 	overflow hidden
 	@media MOBILE
