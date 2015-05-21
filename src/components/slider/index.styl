@@ -5,14 +5,24 @@
 	overflow hidden
 	background-image url('images/slider_1.jpg')
 	background-position center center
-.slider-area-mobile
+#mainCarousel
+	.item 
+		img
+			display block
+			width 100%
+			height auto
+.owl-controls
+	position absolute
 	width 100%
-	height auto
-	display none
-	overflow hidden
+	margin 0px
+	bottom 0px
 	@media MOBILE
-		display block
-	img
-		width 100%
-		height auto
-		float left
+		bottom -5px
+	.owl-page
+		span
+			background #ffffff !important
+			margin 5px !important
+			@media MOBILE
+				width 6px !important
+				height 6px !important
+				margin 5px 2px !important
