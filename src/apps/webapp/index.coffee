@@ -14,6 +14,7 @@ class App
 			singleItem : true
 		)
 
+
 	menuBtnClicked : (e) ->
 		$('.mobile-menu-bg').toggleClass('show')
 		$('.menu').toggleClass('show')

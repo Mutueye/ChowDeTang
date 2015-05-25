@@ -35,9 +35,13 @@ transition()
 	display none !important
 
 .mobile-hidden
-	display block
+	display block !important
 	@media MOBILE
 		display none !important
+.mobile-visible
+	display none
+	@media MOBILE
+		display block !important
 
 .text-left
 	text-align left
