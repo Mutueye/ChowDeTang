@@ -6,7 +6,6 @@ GRAY_E3 = #e3e3e3
 GRAY_33 = #333333
 GRAY_66 = #666666
 GRAY_99 = #999999
-//OCEAN_BLUE = #0c80e8
 OCEAN_BLUE = #00adef
 DEEP_BLUE = #0c80e8
 ORANGE_RED = #e4420a
@@ -84,73 +83,80 @@ COMMON_WIDTH_WIDER = 1200px
 		width COMMON_WIDTH_WIDER + COMMON_SPACE
 	@media MOBILE
 		width 100%
-.inner-container
-	width 100%
-	height auto
-	overflow hidden
-.inner-content
-	width calc(100% + COMMON_SPACE)
-	display block
 .row
 	width 100%
 	height auto
 	display block
-	.col-1of1
+.col-1of1
+	width 100%
+	float left
+.col-1of2
+	width 50%
+	float left
+.col-1of3
+	width 33.333%
+	float left
+.col-2of3
+	width 66.666%
+	float left
+.col-1of4
+	width 25%
+	float left
+.col-3of4
+	width 75%
+	float left
+.col-1of5
+	width 20%
+	float left
+.col-2of5
+	width 40%
+	float left
+.col-3of5
+	width 60%
+	float left
+.col-4of5
+	width 80%
+	float left
+.col-mobile-1of1
+	@media MOBILE
 		width 100%
-		float left
-	.col-1of2
+.col-mobile-1of2
+	@media MOBILE
 		width 50%
-		float left
-	.col-1of2.suit-mobile
-		@media MOBILE
-			width 100%
-	.col-1of3
+.col-mobile-1of3
+	@media MOBILE
 		width 33.333%
-		float left
-	.col-2of3
-		width 66.666%
-		float left
-	.col-1of3.suit-mobile, .col-2of3.suit-mobile
-		@media MOBILE
-			width 100%
-	.col-1of4
+.col-mobile-1of4
+	@media MOBILE
 		width 25%
-		float left
-	.col-1of4.suit-mobile
-		@media MOBILE
-			width 100%
-	.col-1of4.suit-mobile-1of2
-		@media MOBILE
-			width 50%
-	.col-3of4
-		width 75%
-		float left
-	.col-3of4.suit-mobile
-		@media MOBILE
-			width 100%
-	.col-1of5
+.col-mobile-1of5
+	@media MOBILE
 		width 20%
-		float left
-	.col-2of5
+.col-mobile-2of5
+	@media MOBILE
 		width 40%
-		float left
-	.col-3of5
+.col-mobile-3of5
+	@media MOBILE
 		width 60%
-		float left
-	.col-4of5
+.col-mobile-4of5
+	@media MOBILE
 		width 80%
-		float left
-	.col-1of5.suit-mobile, .col-2of5.suit-mobile, .col-3of5.suit-mobile, .col-4of5.suit-mobile
-		@media MOBILE
-			width 100%
-	.col-content
-		width auto
-		display block
-		margin-right COMMON_SPACE
-		margin-bottom COMMON_SPACE
-		@media MOBILE
-			margin-right COMMON_SPACE_MOBILE
-			margin-bottom COMMON_SPACE_MOBILE
+.col-content
+	width auto
+	display block
+	margin-right COMMON_SPACE
+	margin-bottom COMMON_SPACE
+	@media MOBILE
+		margin-right COMMON_SPACE_MOBILE
+		margin-bottom COMMON_SPACE_MOBILE
+.inner-content
+	width auto
+	display block
+	margin-left COMMON_SPACE
+	margin-top COMMON_SPACE
+	@media MOBILE
+		margin-left COMMON_SPACE_MOBILE
+		margin-top COMMON_SPACE_MOBILE
 
 .section-block
 	width 100%

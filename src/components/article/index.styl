@@ -13,6 +13,7 @@
 	.article-title
 		width auto
 		display block
+		position relative
 		height 80px
 		margin 0px COMMON_SPACE
 		border-bottom 1px solid GRAY_E3
@@ -25,16 +26,31 @@
 			height 48px
 			line-height 48px
 			font-size 18px
+		.btn-article-return
+			position absolute
+			width auto
+			height 30px
+			line-height 30px
+			background-color OCEAN_BLUE
+			padding 0px 14px
+			color #ffffff
+			font-size 12px
+			top 25px
+			right 0px
+			text-decoration none
+			cursor pointer
+			@media MOBILE
+				top 9px
 	.article-content
 		width auto
 		display block
-		margin 30px 30px 60px 30px
+		margin COMMON_SPACE COMMON_SPACE COMMON_SPACE*2 COMMON_SPACE
 		font-size 14px
 		color GRAY_33
 		overflow hidden
 		line-height 28px
 		@media MOBILE
-			margin 12px 12px 20px 12px
+			margin COMMON_SPACE_MOBILE COMMON_SPACE_MOBILE COMMON_SPACE_MOBILE*2 COMMON_SPACE_MOBILE
 			line-height 20px
 			font-size 13px
 		img
@@ -44,3 +60,42 @@
 			text-indent 2em
 			@media MOBILE
 				margin 0px
+	.inner-content-article
+		padding-bottom COMMON_SPACE*2
+		@media MOBILE
+			padding-bottom COMMON_SPACE_MOBILE*2
+	.img-item
+		width auto
+		border 1px solid GRAY_E3
+		display block
+		cursor pointer
+		text-decoration none
+		img
+			width 100%
+			box-sizing border-box
+			border 4px solid #ffffff
+			height auto
+			display block
+			text-decoration none
+		.img-title
+			width 100%
+			line-height 30px
+			font-size 14px
+			text-align center
+			display block
+			-moz-text-overflow ellipsis
+			-o-text-overflow ellipsis
+			text-overflow ellipsis
+			overflow hidden
+			white-space nowrap
+			text-decoration none !important
+			color OCEAN_BLUE
+			padding-bottom 4px
+		&:hover
+			border 1px solid OCEAN_BLUE
+			img
+				border-color OCEAN_BLUE
+			.img-title
+				background-color OCEAN_BLUE
+				color #ffffff
+
